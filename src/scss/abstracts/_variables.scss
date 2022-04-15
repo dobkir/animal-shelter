@@ -2,70 +2,75 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
+/// Fonts
+
+$h2: normal 400 4.4rem/5.72rem "Georgia-Regular";
+$h3: normal 400 3.5rem/4.55rem "Georgia-Regular";
+$h3-mobile: normal 400 2.5rem/3.25rem "Georgia-Regular";
+$h4: normal 400 2rem/2.3rem "Georgia-Regular";
+$h5: normal 400 1.5rem/1.65rem "Georgia-Regular";
+$h5-modal-window: normal 700 1.5rem/1.65rem "Georgia-Bold";
+$paragraph-l: normal 400 1.5rem/2.4rem "Arial-Regular";
+$paragraph-s: normal 400 1.2rem/1.8rem "Arial-Italic";
+$paragraph-mobile-menu: normal 400 3.2rem/5.12rem "Arial-Regular";
+$logo_title: normal 400 3.2rem/3.52rem "Arial-Regular";
+$logo_subtitle: normal 400 1.3rem/auto "Georgia-Regular";
 
 
 
+/// Colors
 
-/// Regular font family
-/// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
-
-/// Code (monospace) font family
-/// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
-
-
-
-
-
-/// Copy text color
 /// @type Color
-$text-color: rgb(34, 34, 34) !default;
+$color-light-xl: #ffffff !default;
 
-/// Main brand color
 /// @type Color
-$brand-color: rgb(229, 0, 80) !default;
+$color-light-l: #f6f6f6 !default;
 
-/// Light grey
 /// @type Color
-$light-grey: rgb(237, 237, 237) !default;
+$color-light-s: #fafafa !default;
 
-/// Medium grey
 /// @type Color
-$mid-grey: rgb(153, 153, 153) !default;
+$color-dark-s: #cdcdcd !default;
 
-/// Dark grey
 /// @type Color
-$dark-grey: rgb(68, 68, 68) !default;
+$color-dark-m: #b2b2b2 !default;
 
+/// @type Color
+$color-dark-l: #545454 !default;
 
+/// @type Color
+$color-dark-xl: #4c4c4c !default;
+
+/// @type Color
+$color-dark-2xl: #444444 !default;
+
+/// @type Color
+$color-dark-3xl: #292929 !default;
+
+/// @type Color
+$color-primary: #f1cdb3 !default;
+
+/// @type Color
+$color-primary-light: #fddcc4 !default;
+
+/// @type Background
+$start-screen-gradient-background: linear-gradient(90deg, rgba(91,72,58,1) 0%, rgba(38,36,37,1) 100%),url('../assets/img/noise_transparent.png') !default;
+
+/// @type Background
+$footer-gradient-background: linear-gradient(90deg, rgba(81,61,47,1) 0%, rgba(26,26,28,1) 100%),url('../assets/img/noise_transparent.png') !default;
+
+/// @type Shadow
+// "filter: drop-shadow(...);" or "box-shadow: ...;"
+$card-hover: drop-shadow(0px 2px 35px 14px rgba(13, 13, 13, 4%));
 
 
 
 /// Container's maximum width
 /// @type Length
-$max-width: 1180px !default;
-
-
-
-
-
-/// Breakpoints map
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
-$breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
-) !default;
-
-
-
+$max-width: 1280px !default;
 
 
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
-/// @example scss - When using a CDN
-///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
