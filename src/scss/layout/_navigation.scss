@@ -1,0 +1,6 @@
+.navigation-list {
+  @extend %flex-centered-items-space-btw;
+  width: 443px;
+
+  @extend %transition;
+}

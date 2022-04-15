@@ -5,3 +5,30 @@
   font: $paragraph-l;
   color: $color-dark-3xl;
 }
+
+.navigation__item-link {
+  color: $color-dark-s;
+
+  &:hover,
+  &:focus {
+    color: $color-light-s;
+  }
+
+  &:active {
+    color: $color-light-s;
+
+    border-bottom: 3px solid $color-primary;
+  }
+}
+
+.logo-title__link {
+  font: $logo_title;
+  color: $color-primary;
+  letter-spacing: 0.192rem;
+}
+
+.logo-subtitle {
+  font: $logo_subtitle;
+  color: $color-light-xl;
+  letter-spacing: 0.13rem;
+}
