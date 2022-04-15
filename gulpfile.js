@@ -6,7 +6,7 @@ const autoprefixer = require("gulp-autoprefixer")
 const cssbeautify = require("gulp-cssbeautify")
 const removeComments = require("gulp-strip-css-comments")
 const rename = require("gulp-rename")
-const sass = require("gulp-sass")
+const sass = require("gulp-sass")(require('sass'))
 const cssnano = require("gulp-cssnano")
 const uglify = require("gulp-uglify")
 const plumber = require("gulp-plumber")
@@ -30,6 +30,7 @@ const path = {
     js: distPath + "js/",
     css: distPath + "css/",
     img: distPath + "assets/img/",
+    svg: distPath + "assets/svg/",
     fonts: distPath + "assets/fonts/",
     video: distPath + "assets/video/"
   },
@@ -37,7 +38,8 @@ const path = {
     html: srcPath + "html/pages/**/*.{html,hbs,handlebars}",
     js: srcPath + "js/*.js",
     css: srcPath + "scss/*.scss",
-    img: srcPath + "assets/img/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
+    img: srcPath + "assets/img/**/*.{jpg,png,gif,ico,webp,webmanifest,xml,json}",
+    svg: srcPath + "assets/svg/**/*.svg",
     fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
     video: srcPath + "assets/video/**/*.{jpg, mp4, webm}"
   },
@@ -46,6 +48,7 @@ const path = {
     js: srcPath + "js/**/*.js",
     css: srcPath + "scss/**/*.scss",
     img: srcPath + "assets/img/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
+    svg: srcPath + "assets/svg/**/*.svg",
     fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
     video: srcPath + "assets/video/**/*.{jpg, mp4, webm}"
   },
@@ -59,7 +62,7 @@ function server() {
     server: {
       baseDir: "./" + distPath
     }
-  });
+  })
 }
 
 function html(cb) {
@@ -86,7 +89,7 @@ function css(cb) {
         notify.onError({
           title: "SCSS Error",
           message: "Error: <%= error.message %>"
-        })(err);
+        })(err)
         this.emit("end")
       }
     }))
@@ -122,7 +125,7 @@ function cssWatch(cb) {
         notify.onError({
           title: "SCSS Error",
           message: "Error: <%= error.message %>"
-        })(err);
+        })(err)
         this.emit("end")
       }
     }))
@@ -146,7 +149,7 @@ function js(cb) {
         notify.onError({
           title: "JS Error",
           message: "Error: <%= error.message %>"
-        })(err);
+        })(err)
         this.emit("end")
       }
     }))
@@ -161,7 +164,7 @@ function js(cb) {
             test: /\.(js)$/,
             exclude: /(node_modules)/,
             loader: "babel-loader",
-            query: {
+            options: {
               presets: ["@babel/preset-env"]
             }
           }
@@ -181,7 +184,7 @@ function jsWatch(cb) {
         notify.onError({
           title: "JS Error",
           message: "Error: <%= error.message %>"
-        })(err);
+        })(err)
         this.emit("end")
       }
     }))
@@ -203,12 +206,6 @@ function img(cb) {
       imagemin.gifsicle({ interlaced: true }),
       imagemin.mozjpeg({ quality: 95, progressive: true }),
       imagemin.optipng({ optimizationLevel: 5 }),
-      imagemin.svgo({
-        plugins: [
-          { removeViewBox: true },
-          { cleanupIDs: false }
-        ]
-      })
     ]))
     .pipe(dest(path.build.img))
     .pipe(browserSync.reload({ stream: true }))
@@ -219,6 +216,22 @@ function img(cb) {
 function fonts(cb) {
   return src(path.src.fonts)
     .pipe(dest(path.build.fonts))
+    .pipe(browserSync.reload({ stream: true }))
+
+  cb()
+}
+
+function svg(cb) {
+  return src(path.src.svg)
+    .pipe(imagemin([
+      imagemin.svgo({
+        plugins: [
+          { removeViewBox: true },
+          { cleanupIDs: false }
+        ]
+      })
+    ]))
+    .pipe(dest(path.build.svg))
     .pipe(browserSync.reload({ stream: true }))
 
   cb()
@@ -248,11 +261,12 @@ function watchFiles() {
   gulp.watch([path.watch.css], cssWatch)
   gulp.watch([path.watch.js], jsWatch)
   gulp.watch([path.watch.img], img)
+  gulp.watch([path.watch.svg], svg)
   gulp.watch([path.watch.fonts], fonts)
   gulp.watch([path.watch.video], video)
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, img, fonts, video))
+const build = gulp.series(clean, gulp.parallel(html, css, js, img, svg, fonts, video))
 const watch = gulp.parallel(build, watchFiles, server)
 
 /* Exports Tasks */
@@ -260,6 +274,7 @@ exports.html = html
 exports.css = css
 exports.js = js
 exports.img = img
+exports.img = svg
 exports.fonts = fonts
 exports.video = video
 exports.clean = clean

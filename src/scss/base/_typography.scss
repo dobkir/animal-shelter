@@ -1,7 +1,7 @@
 /**
  * Basic typography style for copy text
  */
-body {
-  color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+.body {
+  font: $paragraph-l;
+  color: $color-dark-3xl;
 }
