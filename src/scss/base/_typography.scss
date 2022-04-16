@@ -22,13 +22,28 @@
 }
 
 .logo-title__link {
-  font: $logo_title;
+  font: $logo-title;
   color: $color-primary;
   letter-spacing: 0.192rem;
 }
 
 .logo-subtitle {
-  font: $logo_subtitle;
+  font: $logo-subtitle;
   color: $color-light-xl;
   letter-spacing: 0.13rem;
+}
+
+.start-screen__title {
+  font: $h1;
+  color: $color-light-xl;
+}
+
+.start-screen__description {
+  font: $paragraph-l;
+  color: $color-dark-s;
+}
+
+.button {
+  font: $button-font;
+  color: $color-dark-3xl;
 }
