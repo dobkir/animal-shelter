@@ -17,6 +17,23 @@
     background-color: $color-primary;
   }
 
+  &__arrow_back,
+  &__arrow_forward {
+    width: 52px;
+    height: 52px;
+    padding: 0;
+
+    border-radius: 50%;
+  }
+
+  &__arrow_back {
+    background: url(../assets/img/arrow-back.png) 50% 50% no-repeat;
+  }
+
+  &__arrow_forward {
+    background: url(../assets/img/arrow-forward.png) 50% 50% no-repeat;
+  }
+
   &:hover,
   &:focus {
     background-color: $color-primary-light;
