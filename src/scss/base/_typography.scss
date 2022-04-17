@@ -47,3 +47,14 @@
   font: $button-font;
   color: $color-dark-3xl;
 }
+
+.section-title {
+  font: $h2;
+  color: $color-dark-l;
+  letter-spacing: 0.21rem;
+}
+
+.about__description {
+  font: $paragraph-l;
+  color: $color-dark-xl;
+}
