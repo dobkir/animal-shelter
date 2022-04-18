@@ -70,3 +70,20 @@
   color: $color-dark-l;
   letter-spacing: 0.12rem;
 }
+
+.card-entry-title {
+  font: $h4;
+  color: $color-dark-l;
+  letter-spacing: 0.09rem;
+}
+
+.card-number {
+  font: $h3;
+  color: $color-dark-l;
+  letter-spacing: 0.12rem;
+}
+
+.donation__description {
+  font: $paragraph-s;
+  color: $color-dark-m;
+}

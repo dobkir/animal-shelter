@@ -6,7 +6,7 @@
   background-image: $gradient-background-image-2x;
 }
 
-.container__start-screen {
+.start-screen__container {
   @extend %flex-centered-items-space-btw;
   flex-wrap: wrap;
   height: 100%;
