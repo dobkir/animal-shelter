@@ -30,9 +30,10 @@
 
 // 6. Page-specific styles
 @import
+  'pages/main-page/start-screen',
   'pages/main-page/about',
   'pages/main-page/our-friends',
-  'pages/main-page/start-screen';
+  'pages/main-page/help';
 
 // 7. Themes
 @import
