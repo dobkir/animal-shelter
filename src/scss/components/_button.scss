@@ -2,6 +2,8 @@
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 .button {
+  display: block;
+  width: fit-content;
   padding: 13px 43px;
 
   letter-spacing: 0.1rem;
