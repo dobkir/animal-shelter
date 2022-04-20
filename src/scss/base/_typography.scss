@@ -25,6 +25,12 @@
   font: $logo-title;
   color: $color-primary;
   letter-spacing: 0.192rem;
+
+  &:hover,
+  &:focus {
+    color: $color-primary-light;
+    text-shadow: 1px 1px 1px $color-primary;
+  }
 }
 
 .logo-subtitle {
