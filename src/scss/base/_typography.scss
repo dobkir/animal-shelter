@@ -87,3 +87,20 @@
   font: $paragraph-s;
   color: $color-dark-m;
 }
+
+.contacts__title,
+.locations__title {
+  color: $color-light-xl;
+}
+
+.contact-link {
+  font: $h3;
+  color: $color-primary;
+  letter-spacing: 0.12rem;
+
+  &:hover,
+  &:focus {
+    color: $color-primary-light;
+    text-shadow: 1px 1px 1px $color-primary;
+  }
+}

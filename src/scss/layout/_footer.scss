@@ -1,3 +1,57 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+.footer {
+  width: 100%;
+  min-height: 35rem;
+  margin: 0 auto;
+
+  background-image: $gradient-background-image-2x;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100%;
+  padding-top: 4rem;
+}
+
+.contacts,
+.locations {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts {
+  width: 28rem;
+}
+
+.locations {
+  width: 31rem;
+}
+
+.contacts__title,
+.locations__title{
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.contacts__list,
+.locations__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.2rem;
+}
+
+.contacts__item,
+.locations__item {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+// .licking-puppy-figure {
+  
+// }
