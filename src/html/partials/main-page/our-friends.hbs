@@ -13,32 +13,28 @@
 
       <ul class="friend-list">
 
-        <li class="friend-card">
-          <figure class="friend-card__foto">
-            <img src="assets/img/pets-katrine.png" alt="friend foto: Katrine" width="270" height="270">
-            <figcaption class="friend-card__name">Katrine</figcaption>
-            <button class="button" title="Click to learn more">Learn more</button>
-          </figure>
-        </li>
-        <!-- /.friend-list__card -->
+        {{! Data is retrieved from src.data}}
+        {{#with friend-cards}}
 
-        <li class="friend-card">
-          <figure class="friend-card__foto">
-            <img src="assets/img/pets-jennifer.png" alt="friend foto: Jennifer" width="270" height="270">
-            <figcaption class="friend-card__name">Jennifer</figcaption>
-            <button class="button" title="Click to learn more">Learn more</button>
-          </figure>
-        </li>
-        <!-- /.friend-list__card -->
+        {{#if card_first}}
+        {{> friend-card card_first}}
+        {{else}}
+        <p>Friend-list first card is empty</p>
+        {{/if}}
 
-        <li class="friend-card">
-          <figure class="friend-card__foto">
-            <img src="assets/img/pets-woody.png" alt="friend foto: Woody" width="270" height="270">
-            <figcaption class="friend-card__name">Woody</figcaption>
-            <button class="button" title="Click to learn more">Learn more</button>
-          </figure>
-        </li>
-        <!-- /.friend-list__card -->
+        {{#if card_second}}
+        {{> friend-card card_second}}
+        {{else}}
+        <p>Friend-list second card is empty</p>
+        {{/if}}
+
+        {{#if card_third}}
+        {{> friend-card card_third}}
+        {{else}}
+        <p>Friend-list third card is empty</p>
+        {{/if}}
+
+        {{/with}}
 
       </ul>
       <!-- /.friend-list -->
