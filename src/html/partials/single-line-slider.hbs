@@ -1,0 +1,39 @@
+<div class="single-line-slider">
+
+  <button class="button button__arrow_back" title="Click to scroll back"></button>
+
+  <ul class="friend-list friend-list_single-line">
+
+    {{! Data is retrieved from src.data}}
+    {{#with friend-cards}}
+
+    {{#if card_first}}
+    {{> friend-card card_first}}
+    {{else}}
+    <p>Friend-list first card is empty</p>
+    {{/if}}
+
+    {{#if card_second}}
+    {{> friend-card card_second}}
+    {{else}}
+    <p>Friend-list second card is empty</p>
+    {{/if}}
+
+    {{#if card_third}}
+    {{> friend-card card_third}}
+    {{else}}
+    <p>Friend-list third card is empty</p>
+    {{/if}}
+
+    {{/with}}
+
+  </ul>
+  <!-- /.friend-list -->
+
+  <button class="button button__arrow_forward" title="Click to scroll forward"></button>
+
+</div>
+<!-- /.single-line-slider -->
+
+<a class="button button_colored" href="./our-pets.html" target="_blank" rel="nofollow"
+  title="Click to make a friend">Get to know the rest</a>

@@ -2,50 +2,27 @@
 
 <section class="our-friends" id="our-friends">
 
-  <div class="container our-friends__container">
+  <div class="container 
+  our-friends__container
+  {{#if isHome}} 
+  our-friends__container_small
+  {{else}}
+  our-friends__container_large
+  {{/if}}
+  ">
 
     <h2 class="section-title our-friends__title">Our friends who<br>
       are looking for a house</h2>
 
-    <div class="slider">
+    {{#if isHome}}
 
-      <button class="button button__arrow_back" title="Click to scroll back"></button>
+    {{> single-line-slider }}
 
-      <ul class="friend-list">
+    {{else}}
 
-        {{! Data is retrieved from src.data}}
-        {{#with friend-cards}}
+    {{> multiline-slider }}
 
-        {{#if card_first}}
-        {{> friend-card card_first}}
-        {{else}}
-        <p>Friend-list first card is empty</p>
-        {{/if}}
-
-        {{#if card_second}}
-        {{> friend-card card_second}}
-        {{else}}
-        <p>Friend-list second card is empty</p>
-        {{/if}}
-
-        {{#if card_third}}
-        {{> friend-card card_third}}
-        {{else}}
-        <p>Friend-list third card is empty</p>
-        {{/if}}
-
-        {{/with}}
-
-      </ul>
-      <!-- /.friend-list -->
-
-      <button class="button button__arrow_forward" title="Click to scroll forward"></button>
-
-    </div>
-    <!-- /.slider -->
-
-    <a class="button button_colored" href="./our-pets.html" target="_blank" rel="nofollow"
-      title="Click to make a friend">Get to know the rest</a>
+    {{/if}}
 
   </div>
   <!-- /.container -->
