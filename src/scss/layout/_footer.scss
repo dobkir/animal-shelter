@@ -13,6 +13,7 @@
 .footer__container {
   display: flex;
   justify-content: space-between;
+  column-gap: 1.6rem;
   flex-wrap: wrap;
   height: 100%;
   padding-top: 4rem;
@@ -22,26 +23,38 @@
 .locations {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  row-gap: 2.5rem;
+  padding-top: 1.9rem;
 }
 
 .contacts {
-  width: 28rem;
+  width: 29rem;
 }
 
 .locations {
   width: 31rem;
+  row-gap: 1.8rem;
 }
 
 .contacts__title,
 .locations__title{
-  margin-top: 2rem;
-  margin-bottom: 2.5rem;
+  margin: 0;
 }
 
 .contacts__list,
 .locations__list {
   display: flex;
   flex-direction: column;
+  row-gap: 4rem;
+}
+
+.contacts__list {
+  row-gap: 4rem;
+}
+
+.locations__list {
   row-gap: 3.2rem;
 }
 
@@ -51,7 +64,3 @@
   align-items: center;
   column-gap: 2rem;
 }
-
-// .licking-puppy-figure {
-  
-// }
