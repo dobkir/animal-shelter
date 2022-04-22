@@ -1,12 +1,14 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
 .button {
   display: block;
   width: fit-content;
   padding: 13px 43px;
 
   letter-spacing: 0.1rem;
+  text-align: center;
 
   background-color: transparent;
   border: 2px solid $color-primary;
@@ -19,21 +21,12 @@
     background-color: $color-primary;
   }
 
-  &__arrow_back,
-  &__arrow_forward {
+  &_circle {
     width: 52px;
     height: 52px;
     padding: 0;
 
     border-radius: 50%;
-  }
-
-  &__arrow_back {
-    background: url(../assets/img/arrow-back.png) 50% 50% no-repeat;
-  }
-
-  &__arrow_forward {
-    background: url(../assets/img/arrow-forward.png) 50% 50% no-repeat;
   }
 
   &:hover,

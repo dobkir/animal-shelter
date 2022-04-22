@@ -53,3 +53,17 @@
   position: absolute;
   width: 1px;
 }
+
+
+/**
+ * Diabled link style
+ */
+.isDisabled {
+  pointer-events: none;
+
+  color: $color-dark-s;
+  text-decoration: none;
+
+  cursor: not-allowed;
+  opacity: 0.5;
+}
