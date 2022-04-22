@@ -1,12 +1,14 @@
 <header class="header">
-  <div class="container header__container">
+  <div class="container header__container
+  {{#if isHome}}{{else}}header__container_secondary{{/if}}">
 
     <div class="header__logo">
       <h1 class="logo-title">
-        <a class="logo-title__link" href="./" title="Cozy House logo. Click on it to return to the heading">Cozy
+        <a class="logo-title__link {{#if isHome}}{{else}}logo-title__link_secondary{{/if}}" href="./"
+          title="Cozy House logo. Click on it to return at home">Cozy
           House</a>
       </h1>
-      <p class="logo-subtitle">Shelter for pets in Boston</p>
+      <p class="logo-subtitle {{#if isHome}}{{else}}logo-subtitle_secondary{{/if}}">Shelter for pets in Boston</p>
     </div>
     <!-- /.header__logo -->
 

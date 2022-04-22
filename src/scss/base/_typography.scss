@@ -10,14 +10,28 @@
   color: $color-dark-s;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     color: $color-light-s;
   }
 
   &:active {
-    color: $color-light-s;
-
     border-bottom: 3px solid $color-primary;
+  }
+  
+  &_secondary {
+    color: $color-dark-l;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-dark-3xl;
+      text-shadow: 0.025rem 0.025rem 0.05rem $color-dark-l;
+    }
+  
+    &:active {
+      border-bottom: 3px solid $color-primary;
+    }
   }
 }
 
@@ -29,7 +43,17 @@
   &:hover,
   &:focus {
     color: $color-primary-light;
-    text-shadow: 1px 1px 1px $color-primary;
+    text-shadow: 0.1rem 0.1rem 0.1rem $color-primary;
+  }
+
+  &_secondary {
+    color: $color-dark-l;
+
+    &:hover,
+    &:focus {
+      color: $color-dark-3xl;
+      text-shadow: 0.1rem 0.1rem 0.1rem $color-dark-l;
+    }
   }
 }
 
@@ -37,6 +61,10 @@
   font: $logo-subtitle;
   color: $color-light-xl;
   letter-spacing: 0.13rem;
+
+  &_secondary {
+    color: $color-dark-3xl;
+  }
 }
 
 .start-screen__title {
