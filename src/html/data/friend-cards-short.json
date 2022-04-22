@@ -1,0 +1,17 @@
+{
+  "card_first": {
+    "name": "Katrine",
+    "image": "assets/img/pets-katrine.png",
+    "link": "#"
+  },
+  "card_second": {
+    "name": "Jennifer",
+    "image": "assets/img/pets-jennifer.png",
+    "link": "#"
+  },
+  "card_third": {
+    "name": "Woody",
+    "image": "assets/img/pets-woody.png",
+    "link": "#"
+  }
+}

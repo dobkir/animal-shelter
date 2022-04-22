@@ -3,57 +3,11 @@
   <ul class="friend-list friend-list_multiline">
 
     {{! Data is retrieved from src.data}}
-    {{#with friend-cards}}
+    {{#each friend-cards}}
 
-    {{#if card_first}}
-    {{> friend-card card_first}}
-    {{else}}
-    <p>Friend-list first card is empty</p>
-    {{/if}}
+    {{> friend-card}}
 
-    {{#if card_second}}
-    {{> friend-card card_second}}
-    {{else}}
-    <p>Friend-list second card is empty</p>
-    {{/if}}
-
-    {{#if card_third}}
-    {{> friend-card card_third}}
-    {{else}}
-    <p>Friend-list third card is empty</p>
-    {{/if}}
-
-    {{#if card_fourth}}
-    {{> friend-card card_fourth}}
-    {{else}}
-    <p>Friend-list fourth card is empty</p>
-    {{/if}}
-
-    {{#if card_fifth}}
-    {{> friend-card card_fifth}}
-    {{else}}
-    <p>Friend-list fifth card is empty</p>
-    {{/if}}
-
-    {{#if card_sixth}}
-    {{> friend-card card_sixth}}
-    {{else}}
-    <p>Friend-list sixth card is empty</p>
-    {{/if}}
-
-    {{#if card_seventh}}
-    {{> friend-card card_seventh}}
-    {{else}}
-    <p>Friend-list seventh card is empty</p>
-    {{/if}}
-
-    {{#if card_eighth}}
-    {{> friend-card card_eighth}}
-    {{else}}
-    <p>Friend-list eighth card is empty</p>
-    {{/if}}
-
-    {{/with}}
+    {{/each}}
 
   </ul>
   <!-- /.friend-list -->
