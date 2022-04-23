@@ -2,33 +2,30 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
-/// Event wrapper
-/// @author Harry Roberts
-/// @param {Bool} $self [false] - Whether or not to include current selector
-/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
-@mixin on-event($self: false) {
-  @if $self {
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
-  } @else {
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
+/// For interactive icons .svg
+
+@mixin mask(
+  $image-url,
+  $mask-size: cover,
+  $bg-color: $color-primary,
+  $hover-color: $color-primary-light
+  ) {
+  // If you don't want a blue square when clicking on svg on a mobile device
+  // use the property '-webkit-tap-highlight-color'
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: $bg-color;
+  background-position: center;
+  -webkit-mask-image: url("#{$image-url}");
+  mask-image: url("#{$image-url}");
+  -webkit-mask-size: $mask-size;
+  mask-size: $mask-size;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-color;
+  }
+
+  &:active {
+    background-color: darken($hover-color, 10%);
   }
 }
-
-/// Make a context based selector a little more friendly
-/// @author Kitty Giraudel
-/// @param {String} $context
-@mixin when-inside($context) {
-  #{$context} & {
-    @content;
-  }
-}
-

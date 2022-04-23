@@ -25,12 +25,12 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  row-gap: 2.5rem;
   padding-top: 1.9rem;
 }
 
 .contacts {
   width: 29rem;
+  row-gap: 2.5rem;
 }
 
 .locations {
@@ -47,7 +47,6 @@
 .locations__list {
   display: flex;
   flex-direction: column;
-  row-gap: 4rem;
 }
 
 .contacts__list {
@@ -58,9 +57,20 @@
   row-gap: 3.2rem;
 }
 
-.contacts__item,
-.locations__item {
+.contact-link {
   display: flex;
   align-items: center;
   column-gap: 2rem;
+
+  @extend %transition;
+
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0.5px 0.5px 1px $color-primary-light);
+  }
+}
+
+.contact-link__icon,
+.contact-link__text {
+  display: block;
 }
