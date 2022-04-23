@@ -16,11 +16,8 @@
       {{/if}}
     </li>
     <li class="navigation__item" title="link: Our contscts">
-      {{#if isHome}}
-      <a class="navigation__item-link" href="#footer">Contacts</a>
-      {{else}}
-      <a class="navigation__item-link navigation__item-link_secondary" href="./#footer">Contacts</a>
-      {{/if}}
+      <a class="navigation__item-link {{#if isHome}}{{else}}navigation__item-link_secondary{{/if}}"
+        href="#footer">Contacts</a>
     </li>
   </ul>
   <!-- /.navigation -->
