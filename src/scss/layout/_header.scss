@@ -11,10 +11,10 @@
 
 .header__container {
   @extend %flex-centered-items-space-btw;
-  height: 18rem;
+  height: 17.8rem;
 
   &_secondary {
-    height: 12rem;
+    height: 11.8rem;
     background-color: $color-light-xl;
   }
 }
@@ -24,8 +24,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 6rem;
-  padding-top: 0.3rem;
+  height: 6.3rem;
 }
 
 .logo-title,
