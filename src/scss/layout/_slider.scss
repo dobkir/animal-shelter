@@ -25,8 +25,7 @@
 }
 
 .friend-card__foto {
-  display: flex;
-  flex-direction: column;
+  @extend %flex-column-space-btw;
   align-items: center;
   width: 27rem;
 

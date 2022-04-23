@@ -13,10 +13,7 @@
   &:focus,
   &:active {
     color: $color-light-s;
-  }
-
-  &:active {
-    border-bottom: 3px solid $color-primary;
+    text-shadow: 0.025rem 0.025rem 0.05rem $color-light-s;
   }
   
   &_secondary {
@@ -27,10 +24,6 @@
     &:active {
       color: $color-dark-3xl;
       text-shadow: 0.025rem 0.025rem 0.05rem $color-dark-l;
-    }
-  
-    &:active {
-      border-bottom: 3px solid $color-primary;
     }
   }
 }

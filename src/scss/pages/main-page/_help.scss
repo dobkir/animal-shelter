@@ -33,9 +33,7 @@
 }
 
 .help-type__icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @extend %flex-column-space-btw;
   align-items: center;
   height: 11.3rem;
 }

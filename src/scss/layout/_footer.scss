@@ -21,9 +21,7 @@
 
 .contacts,
 .locations {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @extend %flex-column-space-btw;
   height: 100%;
   padding-top: 1.9rem;
 }

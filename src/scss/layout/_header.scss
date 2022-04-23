@@ -20,10 +20,8 @@
 }
 
 .header__logo {
-  display: flex;
-  flex-direction: column;
+  @extend %flex-column-space-btw;
   align-items: center;
-  justify-content: space-between;
   height: 6.3rem;
 }
 
