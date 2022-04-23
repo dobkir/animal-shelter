@@ -33,4 +33,8 @@
   &:focus {
     background-color: $color-primary-light;
   }
+
+  &.isDisabled {
+    border-color: $color-dark-s;
+  }
 }
