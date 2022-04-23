@@ -1,0 +1,30 @@
+<!--============  Our Friends ============-->
+
+<section class="our-friends" id="our-friends">
+
+  <div class="container 
+  our-friends__container
+  {{#if isHome}} 
+  our-friends__container_small
+  {{else}}
+  our-friends__container_large
+  {{/if}}
+  ">
+
+    <h2 class="section-title our-friends__title">Our friends who<br>
+      are looking for a house</h2>
+
+    {{#if isHome}}
+
+    {{> single-line-slider }}
+
+    {{else}}
+
+    {{> multiline-slider }}
+
+    {{/if}}
+
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /.our-friends -->

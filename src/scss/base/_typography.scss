@@ -1,0 +1,138 @@
+/**
+ * Basic typography style for copy text
+ */
+.body {
+  font: $paragraph-l;
+  color: $color-dark-3xl;
+}
+
+.navigation__item-link {
+  color: $color-dark-s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-light-s;
+    text-shadow: 0.025rem 0.025rem 0.05rem $color-light-s;
+  }
+  
+  &_secondary {
+    color: $color-dark-l;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-dark-3xl;
+      text-shadow: 0.025rem 0.025rem 0.05rem $color-dark-l;
+    }
+  }
+}
+
+.logo-title__link {
+  font: $logo-title;
+  color: $color-primary;
+  letter-spacing: 0.192rem;
+
+  &:hover,
+  &:focus {
+    color: $color-primary-light;
+    text-shadow: 0.1rem 0.1rem 0.1rem $color-primary;
+  }
+
+  &_secondary {
+    color: $color-dark-l;
+
+    &:hover,
+    &:focus {
+      color: $color-dark-3xl;
+      text-shadow: 0.1rem 0.1rem 0.1rem $color-dark-l;
+    }
+  }
+}
+
+.logo-subtitle {
+  font: $logo-subtitle;
+  color: $color-light-xl;
+  letter-spacing: 0.13rem;
+
+  &_secondary {
+    color: $color-dark-3xl;
+  }
+}
+
+.start-screen__title {
+  font: $h1;
+  color: $color-light-xl;
+}
+
+.start-screen__description {
+  font: $paragraph-l;
+  color: $color-dark-s;
+}
+
+.button {
+  font: $button-font;
+  color: $color-dark-3xl;
+}
+
+.section-title {
+  font: $h2;
+  color: $color-dark-l;
+  letter-spacing: 0.21rem;
+}
+
+.about__description {
+  font: $paragraph-l;
+  color: $color-dark-xl;
+}
+
+.friend-card__name {
+  font: $card-font;
+  color: $color-dark-l;
+  letter-spacing: 0.12rem;
+}
+
+.help-type__name {
+  font: $h3;
+  color: $color-dark-l;
+  letter-spacing: 0.12rem;
+}
+
+.card-entry-title {
+  font: $h4;
+  color: $color-dark-l;
+  letter-spacing: 0.09rem;
+}
+
+.card-number {
+  font: $h3;
+  color: $color-dark-l;
+  letter-spacing: 0.12rem;
+}
+
+.donation__description {
+  font: $paragraph-s;
+  color: $color-dark-m;
+}
+
+.contacts__title,
+.locations__title {
+  color: $color-light-xl;
+}
+
+.contact-link {
+  font: $h3;
+  color: $color-primary;
+  letter-spacing: 0.12rem;
+
+  &:hover,
+  &:focus {
+    color: $color-primary-light;
+  }
+}
+
+.button_page-num {
+  font: $h3;
+  color: $color-dark-3xl;
+  letter-spacing: 0.12rem;
+}

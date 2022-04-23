@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+  width: 100%;
+  min-height: 35rem;
+  margin: 0 auto;
+
+  background-image: $gradient-background-image-2x;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1.6rem;
+  flex-wrap: wrap;
+  height: 100%;
+  padding-top: 4rem;
+}
+
+.contacts,
+.locations {
+  @extend %flex-column-space-btw;
+  height: 100%;
+  padding-top: 1.9rem;
+}
+
+.contacts {
+  width: 29rem;
+  row-gap: 2.5rem;
+}
+
+.locations {
+  width: 31rem;
+  row-gap: 1.8rem;
+}
+
+.contacts__title,
+.locations__title{
+  margin: 0;
+}
+
+.contacts__list,
+.locations__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__list {
+  row-gap: 4rem;
+}
+
+.locations__list {
+  row-gap: 3.2rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+
+  @extend %transition;
+
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0.5px 0.5px 1px $color-primary-light);
+  }
+}
+
+.contact-link__icon,
+.contact-link__text {
+  display: block;
+}

@@ -1,0 +1,55 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+html {
+  box-sizing: border-box;
+  font-size: 0.625em;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  text-decoration: none;
+  color: $color-dark-l;
+
+  @extend %transition;
+
+  &:hover,
+  &:focus {
+    color: $color-dark-3xl;
+  }
+
+  &:active {
+    color: $color-dark-3xl;
+  }
+}
+
+.active-link {
+  color: $color-dark-3xl;
+
+  border-bottom: 3px solid $color-primary;
+}
+
+/**
+ * Basic styles for lists
+ */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/**
+ * Reset margins for figure
+ */
+figure {
+  margin: 0;
+  padding: 0;
+}

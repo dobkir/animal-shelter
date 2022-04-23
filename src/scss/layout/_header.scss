@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+  width: 100%;
+  margin: 0 auto;
+
+  background-image: $gradient-background-image-2x;
+}
+
+.header__container {
+  @extend %flex-centered-items-space-btw;
+  height: 17.8rem;
+
+  &_secondary {
+    height: 11.8rem;
+    background-color: $color-light-xl;
+  }
+}
+
+.header__logo {
+  @extend %flex-column-space-btw;
+  align-items: center;
+  height: 6.3rem;
+}
+
+.logo-title,
+.logo-subtitle {
+  margin: 0;
+}

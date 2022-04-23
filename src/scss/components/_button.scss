@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.button {
+  display: block;
+  width: fit-content;
+  padding: 13px 43px;
+
+  letter-spacing: 0.1rem;
+  text-align: center;
+
+  background-color: transparent;
+  border: 2px solid $color-primary;
+  border-radius: 10rem;
+  cursor: pointer;
+
+  @extend %transition;
+
+  &_colored {
+    background-color: $color-primary;
+  }
+
+  &_circle {
+    width: 52px;
+    height: 52px;
+    padding: 0;
+
+    border-radius: 50%;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary-light;
+  }
+
+  &.isDisabled {
+    border-color: $color-dark-s;
+  }
+}

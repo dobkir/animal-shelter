@@ -1,0 +1,75 @@
+.single-line-slider {
+  @extend %flex-centered-items-space-btw;
+  width: 100%;
+  margin: 4.4rem auto;
+}
+
+.multiline-slider {
+  width: 100%;
+  margin: 4.4rem auto;
+}
+
+.friend-list {
+  @extend %flex-centered-items-space-btw;
+  flex-wrap: wrap;
+  height: 100%;
+
+  &_single-line {
+    width: calc(100% - 21rem);
+  }
+
+  &_multiline {
+    gap: 2.8rem 4rem;
+    width: 100%;
+  }
+}
+
+.friend-card__foto {
+  @extend %flex-column-space-btw;
+  align-items: center;
+  row-gap: 3rem;
+  width: 27rem;
+
+  background-color: $color-light-s;
+  cursor: pointer;
+
+  @extend %transition;
+
+  &:hover,
+  &:focus {
+    background-color: $color-light-xl;
+    border-radius: 10px;
+    box-shadow:4px 4px 14px 4px rgba($color-dark-3xl, 0.6);
+
+    & > .friend-card__name .button {
+      animation: pulseButton 1.6s infinite;
+    }
+  }
+}
+
+@keyframes pulseButton {
+  0% {
+    box-shadow: 0 0 0 0 rgba($color-primary, 0.6);
+  }  
+  70% {
+    box-shadow: 0 0 0 10px rgba($color-dark-3xl, 0);
+  }  
+  100% {
+    box-shadow: 2px 2px 10px 2px rgba($color-primary, 0.2);
+  }
+}
+
+.friend-card__name {
+  @extend %flex-column-space-btw;
+  align-items: center;
+  row-gap: 3rem;
+  
+  & > * {
+    margin-bottom: 3rem;
+  }
+}
+
+.pagination {
+  @extend %flex-centered-items-space-btw;
+  column-gap: 2rem;
+}

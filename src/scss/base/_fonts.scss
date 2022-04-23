@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations.
+// -----------------------------------------------------------------------------
+
+@font-face {
+  font-family: "Arial-Regular";
+  src:
+    local("Arial-regular"),
+    local("Arial Regular"),
+    local("ArialRegular"),
+    url("../assets/fonts/Arial-Regular.woff2"),
+    url("../assets/fonts/Arial-Regular.woff") format("woff"),
+    url("../assets/fonts/Arial-Regular.ttf") format("ttf");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Georgia-Regular";
+  src:
+    local("Georgia-regular"),
+    local("Georgia Regular"),
+    local("GeorgiaRegular"),
+    url("../assets/fonts/Georgia-Regular.woff2"),
+    url("../assets/fonts/Georgia-Regular.woff") format("woff"),
+    url("../assets/fonts/Georgia-Regular.ttf") format("ttf");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Georgia-Italic";
+  src:
+    local("Georgia-italic"),
+    local("Georgia Italic"),
+    local("GeorgiaItalic"),
+    url("../assets/fonts/Georgia-Italic.woff2"),
+    url("../assets/fonts/Georgia-Italic.woff") format("woff"),
+    url("../assets/fonts/Georgia-Italic.ttf") format("ttf");
+  font-display: swap;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Georgia-Bold";
+  src:
+    local("Georgia-bold"),
+    local("Georgia Bold"),
+    local("GeorgiaBold"),
+    url("../assets/fonts/Georgia-Bold.woff2"),
+    url("../assets/fonts/Georgia-Bold.woff") format("woff"),
+    url("../assets/fonts/Georgia-Bold.ttf") format("ttf");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Georgia-Bold-Italic";
+  src:
+    local("Georgia-italic"),
+    local("Georgia Bold-Italic"),
+    local("GeorgiaItalic"),
+    url("../assets/fonts/Georgia-Bold-Italic.woff2"),
+    url("../assets/fonts/Georgia-Bold-Italic.woff") format("woff"),
+    url("../assets/fonts/Georgia-Bold-Italic.ttf") format("ttf");
+  font-display: swap;
+  font-weight: 700;
+  font-style: italic;
+}
+

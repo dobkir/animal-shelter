@@ -1,0 +1,48 @@
+.donation {
+  width: 100%;
+  margin: 0 auto;
+
+  background-image: $gradient-background-image-2x;
+}
+
+.donation__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 3rem;
+  min-height: 46.2rem;
+
+  background-color: $color-light-l;
+}
+
+.puppy-need-money-figure {
+  margin-bottom: 1rem;
+}
+
+.section-content {
+  @extend %flex-column-space-btw;
+  width: 38rem;
+  padding-right: 2rem;
+  padding-bottom: 3.4rem;
+}
+
+.donation__title {
+  margin-bottom: 0;
+}
+
+.card-entry-title {
+  margin-top: 2.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.card-entry-data {
+  display: flex;
+  gap: 1.5rem;
+  width: 35rem;
+  margin-bottom: 0.8rem;
+  padding: 1rem 1.5rem;
+
+  background-color: $color-primary;
+  border-radius: 0.9rem;
+}

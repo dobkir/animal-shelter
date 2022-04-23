@@ -1,0 +1,25 @@
+<nav class="navigation">
+  <ul class="navigation-list">
+    <li class="navigation__item" title="link: About the shelter">
+      <a class="navigation__item-link {{#if isHome}}active-link{{else}}navigation__item-link_secondary{{/if}}"
+        href="./index.html">About the shelter</a>
+    </li>
+    <li class="navigation__item" title="link: More about our pets">
+      <a class="navigation__item-link {{#if isHome}}{{else}}active-link navigation__item-link_secondary{{/if}}"
+        href="./our-pets.html">Our pets</a>
+    </li>
+    <li class="navigation__item" title="link: How you can help our shelter">
+      {{#if isHome}}
+      <a class="navigation__item-link" href="#help">Help the shelter</a>
+      {{else}}
+      <a class="navigation__item-link navigation__item-link_secondary" href="./#help">Help the shelter</a>
+      {{/if}}
+    </li>
+    <li class="navigation__item" title="link: Our contscts">
+      <a class="navigation__item-link {{#if isHome}}{{else}}navigation__item-link_secondary{{/if}}"
+        href="#footer">Contacts</a>
+    </li>
+  </ul>
+  <!-- /.navigation -->
+</nav>
+<!-- /.navigation -->

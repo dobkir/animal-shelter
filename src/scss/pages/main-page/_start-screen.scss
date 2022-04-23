@@ -1,0 +1,32 @@
+.start-screen {
+  width: 100%;
+  margin: 0 auto;
+
+  background-image: $gradient-background-image-2x;
+}
+
+.start-screen__container {
+  @extend %flex-centered-items-space-btw;
+  flex-wrap: wrap;
+  min-height: 73rem;
+}
+
+.start-screen__content {
+  width: 46rem;
+  margin-bottom: 11.4rem;
+}
+
+.start-screen__title {
+  width: 31rem;
+  margin-bottom: 4rem;
+}
+
+.start-screen__description {
+  margin-bottom: 4.3rem;
+}
+
+.start-screen-figure {
+  max-height: 72.8rem;
+
+  filter: drop-shadow(0 4px 4px $color-dark-3xl);
+}
