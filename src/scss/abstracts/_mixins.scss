@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Adaptive design breakpoints
+
+// Landscape tablets and medium desktops
+@mixin media-desktop {
+  @media (max-width: 1279px) { @content; }
+}
+
+
+// Portrait tablets and small desktops
+@mixin media-tablet-landscape {
+  @media (max-width: 991px) { @content; }
+}
+
+// Landscape phones and portrait tablets
+@mixin media-tablet-portrait {
+  @media (max-width: 767px) { @content; }
+}
+
+// Portrait phones and smaller
+@mixin media-phone {
+  @media (max-width: 479px) { @content; }
+}
+
+// Iphone 5
+@mixin media-iphone5 {
+  @media (max-width: 319px) { @content; }
+}

@@ -6,12 +6,9 @@
 }
 
 .help__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 61rem;
-  padding-bottom: 2rem;
+  @extend %flex-column-centered;
+  padding-top: 5.3rem;
+  padding-bottom: 6.9rem;
 
   background-color: $color-light-xl;
 }

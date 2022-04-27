@@ -1,12 +1,12 @@
 .single-line-slider {
   @extend %flex-centered-items-space-btw;
   width: 100%;
-  margin: 4.4rem auto;
+  margin: 4.35rem auto 4.55rem;
 }
 
 .multiline-slider {
   width: 100%;
-  margin: 4.4rem auto;
+  margin: 4.35rem auto 4.65rem;
 }
 
 .friend-list {
@@ -19,15 +19,14 @@
   }
 
   &_multiline {
-    gap: 2.8rem 4rem;
+    gap: 3rem 4rem;
     width: 100%;
   }
 }
 
 .friend-card__foto {
-  @extend %flex-column-space-btw;
-  align-items: center;
-  row-gap: 3rem;
+  @extend %flex-column-centered;
+  row-gap: 2.9rem;
   width: 27rem;
 
   background-color: $color-light-s;
@@ -62,10 +61,10 @@
 .friend-card__name {
   @extend %flex-column-space-btw;
   align-items: center;
-  row-gap: 3rem;
+  row-gap: 2.9rem;
   
   & > * {
-    margin-bottom: 3rem;
+    margin-bottom: 2.9rem;
   }
 }
 

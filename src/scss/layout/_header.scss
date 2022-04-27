@@ -11,10 +11,11 @@
 
 .header__container {
   @extend %flex-centered-items-space-btw;
-  height: 17.8rem;
+  padding-top: 5.75rem;
 
   &_secondary {
-    height: 11.8rem;
+    padding-top: 2.75rem;
+    padding-bottom: 2.75rem;
     background-color: $color-light-xl;
   }
 }
@@ -22,7 +23,7 @@
 .header__logo {
   @extend %flex-column-space-btw;
   align-items: center;
-  height: 6.3rem;
+  row-gap: 0.5rem;
 }
 
 .logo-title,

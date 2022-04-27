@@ -8,7 +8,7 @@
 .start-screen__container {
   @extend %flex-centered-items-space-btw;
   flex-wrap: wrap;
-  min-height: 73rem;
+  padding-top: 5.75rem;
 }
 
 .start-screen__content {

@@ -4,7 +4,6 @@
 
 .footer {
   width: 100%;
-  min-height: 35rem;
   margin: 0 auto;
 
   background-image: $gradient-background-image-2x;
@@ -52,13 +51,13 @@
 }
 
 .locations__list {
-  row-gap: 3.2rem;
+  row-gap: 3.3rem;
 }
 
 .contact-link {
   display: flex;
   align-items: center;
-  column-gap: 2rem;
+  column-gap: 1.9rem;
 
   @extend %transition;
 

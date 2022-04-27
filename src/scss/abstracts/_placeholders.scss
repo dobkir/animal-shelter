@@ -2,9 +2,22 @@
   transition: all 0.4s ease-in-out;
 }
 
+%flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 %flex-centered-items-space-btw {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+%flex-column-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
